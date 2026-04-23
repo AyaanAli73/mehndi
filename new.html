@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sana's Mehndi | Sleek Glassmorphism</title>
+    <meta name="description" content="Premium handcrafted mehndi designs in Surat. Experience modern elegance and traditional artistry.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Syne for avant-garde modern headings, Plus Jakarta for sleek body -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&family=Allura&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="tailwindcss.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#0a0908',
+                        'henna-glow': '#9b2226',
+                        'gold-glow': '#ca6702',
+                        'copper-glow': '#ae2012',
+                        light: '#fdf0d5',
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['"Syne"', 'sans-serif'],
+                        accent: ['"Allura"', 'cursive']
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased selection:bg-gold-glow selection:text-white">
+
+    <!-- Fixed Ambient Background Orbs -->
+    <div class="ambient-orb bg-henna-glow w-[80vw] h-[80vw] md:w-[50vw] md:h-[50vw] top-[-10%] left-[-20%] md:left-[-10%]"></div>
+    <div class="ambient-orb bg-gold-glow w-[70vw] h-[70vw] md:w-[40vw] md:h-[40vw] bottom-[-10%] right-[-20%] md:right-[-10%]" style="animation-duration: 25s; animation-delay: -5s;"></div>
+    <div class="ambient-orb bg-copper-glow w-[60vw] h-[60vw] md:w-[30vw] md:h-[30vw] top-[40%] left-[20%] md:left-[30%]" style="animation-duration: 30s; animation-delay: -10s; filter: blur(100px); opacity: 0.25;"></div>
+
+    <!-- Unique Full-Screen Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-40 bg-dark/85 backdrop-blur-3xl opacity-0 pointer-events-none transition-opacity duration-500 flex flex-col justify-center lg:hidden">
+        <!-- Internal Ambient Glows for Menu -->
+        <div class="absolute top-1/4 right-[-20%] w-64 h-64 bg-gold-glow/30 rounded-full filter blur-[60px] pointer-events-none"></div>
+        <div class="absolute bottom-1/4 left-[-20%] w-64 h-64 bg-henna-glow/30 rounded-full filter blur-[60px] pointer-events-none"></div>
+
+        <ul class="flex flex-col items-center justify-center gap-8 px-6 text-center w-full z-10">
+            <li class="menu-item-reveal"><a href="#services" class="mobile-link font-display text-4xl font-bold text-white hover:text-gold-glow transition-colors tracking-tight">Services</a></li>
+            <li class="menu-item-reveal"><a href="#process" class="mobile-link font-display text-4xl font-bold text-white hover:text-gold-glow transition-colors tracking-tight">Process</a></li>
+            <li class="menu-item-reveal"><a href="#gallery" class="mobile-link font-display text-4xl font-bold text-white hover:text-gold-glow transition-colors tracking-tight">Portfolio</a></li>
+            <li class="menu-item-reveal"><a href="#packages" class="mobile-link font-display text-4xl font-bold text-white hover:text-gold-glow transition-colors tracking-tight">Packages</a></li>
+            <li class="menu-item-reveal"><a href="#faq" class="mobile-link font-display text-4xl font-bold text-white hover:text-gold-glow transition-colors tracking-tight">FAQ</a></li>
+            <li class="menu-item-reveal mt-4">
+                <a href="#contact" class="mobile-link inline-block glass border border-gold-glow/50 text-white font-display font-bold px-8 py-4 rounded-full text-xl shadow-[0_0_20px_rgba(202,103,2,0.2)]">Book Session</a>
+            </li>
+        </ul>
+
+        <!-- Socials in menu -->
+        <div class="menu-item-reveal absolute bottom-10 left-0 w-full flex justify-center gap-6 z-10">
+            <a href="#" class="w-12 h-12 rounded-full glass border border-white/20 flex items-center justify-center text-white/70 text-lg"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-12 h-12 rounded-full glass border border-white/20 flex items-center justify-center text-white/70 text-lg"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 py-3 md:py-5 glass-nav">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 flex justify-between items-center relative z-20">
+            <a href="#hero" class="flex items-center gap-3 group relative">
+                <div class="w-8 h-8 md:w-10 md:h-10 rounded-full glass flex items-center justify-center text-light group-hover:bg-light group-hover:text-dark transition-all duration-500">
+                    <i class="fas fa-leaf text-sm md:text-base"></i>
+                </div>
+                <span class="font-display font-bold text-xl md:text-2xl tracking-tight text-white uppercase">Sana.</span>
+            </a>
+            
+            <!-- Desktop Links -->
+            <ul class="hidden lg:flex items-center gap-8 xl:gap-10 text-xs tracking-widest uppercase font-semibold text-white/70">
+                <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                <li><a href="#process" class="hover:text-white transition-colors">Process</a></li>
+                <li><a href="#gallery" class="hover:text-white transition-colors">Portfolio</a></li>
+                <li><a href="#packages" class="hover:text-white transition-colors">Packages</a></li>
+                <li><a href="#reviews" class="hover:text-white transition-colors">Reviews</a></li>
+                <li>
+                    <a href="#contact" class="glass-btn text-white px-6 py-2.5 rounded-full flex items-center gap-2">
+                        <span>Book</span>
+                        <i class="fas fa-arrow-right text-[10px]"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-toggle" class="lg:hidden w-10 h-10 rounded-full glass border border-white/20 shadow-lg flex items-center justify-center text-white focus:outline-none z-50 relative">
+                <i class="fas fa-bars transition-transform duration-300"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Mobile: Clean Editorial Flow | Desktop: Split Grid) -->
+    <section id="hero" class="relative min-h-[100svh] flex items-center pt-24 pb-12 z-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 flex flex-col lg:grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-24 items-center w-full">
+            
+            <!-- Morphing Hero Image (Mobile: Top perfectly centered | Desktop: Right) -->
+            <div class="relative z-10 order-1 lg:order-2 flex justify-center items-center reveal delay-200 mt-2 md:mt-12 lg:mt-0 w-full">
+                <!-- Glowing back shadow -->
+                <div class="absolute inset-0 bg-gold-glow/30 morph-shape filter blur-2xl scale-[0.8] md:scale-90"></div>
+                <!-- Glass border layer -->
+                <div class="absolute inset-[-8px] md:inset-[-10px] glass morph-shape-reverse opacity-50 border border-white/20"></div>
+                <!-- Main Image - Mobile Adjusted -->
+                <div class="w-[280px] h-[360px] sm:w-[320px] sm:h-[420px] md:w-[450px] md:h-[550px] morph-shape border border-white/10 relative shadow-2xl">
+                    <img src="images/sana_portrait.png" alt="Sana Mehndi Art" class="morph-img w-full h-full object-cover object-center absolute inset-0">
+                    <!-- Glass overlay gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent mix-blend-multiply"></div>
+                </div>
+            </div>
+
+            <!-- Text Content (Mobile: Clean & breathable below image | Desktop: Left) -->
+            <div class="reveal z-20 order-2 lg:order-1 text-center lg:text-left mt-4 md:mt-0 w-full mx-auto">
+                <div class="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-[10px] md:text-xs font-semibold tracking-widest uppercase text-white/80 mb-6 border border-white/20">
+                    <span class="w-2 h-2 rounded-full bg-gold-glow animate-pulse"></span> Premium Mehndi Art
+                </div>
+                
+                <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[1.1] mb-4 md:mb-6">
+                    Fluid <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-glow to-henna-glow">Tradition.</span>
+                </h1>
+                
+                <p class="font-accent text-3xl sm:text-4xl text-white/60 mb-6 md:mb-8">Crafted for the modern bride.</p>
+                
+                <p class="text-white/70 text-sm md:text-lg mb-8 md:mb-10 max-w-lg mx-auto lg:mx-0 font-light leading-relaxed">
+                    Sana brings intricate henna designs to life through organic artistry and skin-safe natural elements. Serving Surat with unparalleled elegance.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start">
+                    <a href="#contact" class="glass-btn text-white px-8 py-3.5 md:py-4 rounded-full font-semibold tracking-wider text-sm flex items-center justify-center gap-3">
+                        Reserve Your Date <i class="fas fa-calendar-check"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Interactive Stats (Glassmorphism) -->
+    <section class="relative z-10 md:-mt-10 mb-16 md:mb-20 px-4 md:px-6">
+        <div class="max-w-5xl mx-auto glass-panel rounded-3xl p-6 sm:p-8 md:p-12 grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-center reveal border border-white/10">
+            <div>
+                <div class="font-display text-4xl md:text-5xl font-bold text-white mb-1 md:mb-2"><span class="counter" data-target="300">0</span>+</div>
+                <div class="text-[10px] md:text-xs tracking-widest uppercase text-white/50">Brides Styled</div>
+            </div>
+            <div class="hidden md:block w-px h-16 bg-white/10 mx-auto"></div>
+            <div class="md:hidden h-px w-24 bg-white/10 mx-auto"></div>
+            <div>
+                <div class="font-display text-4xl md:text-5xl font-bold text-white mb-1 md:mb-2"><span class="counter" data-target="4">0</span>+</div>
+                <div class="text-[10px] md:text-xs tracking-widest uppercase text-white/50">Years Mastery</div>
+            </div>
+            <div class="hidden md:block w-px h-16 bg-white/10 mx-auto"></div>
+            <div class="md:hidden h-px w-24 bg-white/10 mx-auto"></div>
+            <div>
+                <div class="font-display text-4xl md:text-5xl font-bold text-white mb-1 md:mb-2"><span class="counter" data-target="100">0</span>%</div>
+                <div class="text-[10px] md:text-xs tracking-widest uppercase text-white/50">Organic Henna</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Mobile: Sticky Deck | Desktop: Grid) -->
+    <section id="services" class="py-16 md:py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-20 reveal">
+                <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">My Offerings</p>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Curated Services</h2>
+            </div>
+
+            <!-- Sticky Deck Layout -->
+            <div class="flex flex-col gap-6 md:grid md:grid-cols-3 md:gap-8 pb-10 md:pb-0">
+                
+                <!-- Card 1 -->
+                <div class="glass-panel p-6 md:p-8 rounded-[2rem] md:hover:-translate-y-2 transition-transform duration-500 group reveal sticky top-24 md:static z-10 shadow-2xl md:shadow-none bg-dark/80 md:bg-transparent">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-[1.5rem] glass flex items-center justify-center text-white/80 text-xl md:text-2xl mb-6 md:mb-8 group-hover:text-gold-glow group-hover:scale-110 transition-all duration-500 border border-white/10">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3">Bridal Mastery</h3>
+                    <p class="text-white/60 text-sm leading-relaxed mb-6">Full hands and feet intricate designs featuring personalized motifs, portraits, and storytelling patterns.</p>
+                    <ul class="space-y-3 text-sm text-white/50 border-t border-white/10 pt-6">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold-glow"></span> Custom Love Stories</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold-glow"></span> Pre-wedding Trial</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="glass-panel p-6 md:p-8 rounded-[2rem] md:hover:-translate-y-2 transition-transform duration-500 group reveal sticky top-28 md:static z-20 shadow-2xl md:shadow-none mt-2 md:mt-0 overflow-hidden border-gold-glow/30 bg-dark/90 md:bg-transparent">
+                    <div class="absolute top-0 right-0 bg-gold-glow text-white text-[9px] md:text-[10px] font-bold px-3 py-1.5 rounded-bl-[1rem] uppercase tracking-widest z-20">Popular</div>
+                    <div class="absolute -right-10 -top-10 w-32 h-32 md:w-40 md:h-40 bg-gold-glow/20 filter blur-3xl rounded-full z-0"></div>
+                    
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-[1.5rem] glass flex items-center justify-center text-white/80 text-xl md:text-2xl mb-6 md:mb-8 group-hover:text-gold-glow group-hover:scale-110 transition-all duration-500 relative z-10 border border-white/10">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3 relative z-10">Engagement</h3>
+                    <p class="text-white/60 text-sm leading-relaxed mb-6 relative z-10">A delicate balance of contemporary fusion and traditional art, tailored perfectly for ring ceremonies.</p>
+                    <ul class="space-y-3 text-sm text-white/50 relative z-10 border-t border-white/10 pt-6">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold-glow"></span> Front & Back Arms</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold-glow"></span> Initial Integration</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="glass-panel p-6 md:p-8 rounded-[2rem] md:hover:-translate-y-2 transition-transform duration-500 group reveal sticky top-32 md:static z-30 shadow-2xl md:shadow-none mt-2 md:mt-0 bg-[#0d0a08] md:bg-transparent">
+                    <div class="w-14 h-14 md:w-16 md:h-16 rounded-[1.5rem] glass flex items-center justify-center text-white/80 text-xl md:text-2xl mb-6 md:mb-8 group-hover:text-gold-glow group-hover:scale-110 transition-all duration-500 border border-white/10">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3">Festival & Arabic</h3>
+                    <p class="text-white/60 text-sm leading-relaxed mb-6">Bold, flowing, and modern Arabic vines perfect for Eid, Karva Chauth, Diwali, and guests.</p>
+                    <ul class="space-y-3 text-sm text-white/50 border-t border-white/10 pt-6">
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold-glow"></span> Bold Floral Vines</li>
+                        <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-gold-glow"></span> Quick Application</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Journey (Process) Section - Mobile: Staggered Zig-Zag -->
+    <section id="process" class="py-16 md:py-24 relative z-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-20 reveal">
+                <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">The Experience</p>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">How It Works</h2>
+            </div>
+
+            <div class="relative">
+                <!-- Connecting Line Desktop Only -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-gold-glow/50 to-transparent transform -translate-y-1/2 z-0"></div>
+                
+                <div class="flex flex-col gap-4 md:grid md:grid-cols-4 md:gap-8 relative z-10">
+                    
+                    <!-- Step 1 -->
+                    <div class="w-[85%] self-start md:w-full reveal relative glass-panel p-6 md:p-8 rounded-[2rem] overflow-hidden group border border-white/10">
+                        <div class="absolute -right-4 -top-8 font-display font-bold text-8xl text-white/[0.03] group-hover:text-gold-glow/[0.05] transition-colors pointer-events-none select-none">01</div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gold-glow/30 flex items-center justify-center text-gold-glow mb-4 relative z-10 bg-dark/50">
+                            <i class="fas fa-phone-alt text-xs md:text-sm"></i>
+                        </div>
+                        <h3 class="font-display text-lg md:text-xl font-bold text-white mb-2 relative z-10">Consultation</h3>
+                        <p class="text-white/50 text-xs md:text-sm leading-relaxed relative z-10">Reach out to discuss your event dates, outfit, and design inspirations via WhatsApp or Call.</p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="w-[85%] self-end -mt-6 md:mt-0 md:w-full reveal relative glass-panel p-6 md:p-8 rounded-[2rem] overflow-hidden group border border-white/10 shadow-2xl z-10 bg-dark/80 md:bg-transparent">
+                        <div class="absolute -left-4 -top-8 font-display font-bold text-8xl text-white/[0.03] group-hover:text-gold-glow/[0.05] transition-colors pointer-events-none select-none">02</div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gold-glow/30 flex items-center justify-center text-gold-glow mb-4 relative z-10 bg-dark/50 ml-auto md:ml-0">
+                            <i class="fas fa-pencil-ruler text-xs md:text-sm"></i>
+                        </div>
+                        <h3 class="font-display text-lg md:text-xl font-bold text-white mb-2 relative z-10 text-right md:text-left">Customization</h3>
+                        <p class="text-white/50 text-xs md:text-sm leading-relaxed relative z-10 text-right md:text-left">We curate a unique pattern tailored for you, integrating elements that tell your personal story.</p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="w-[85%] self-start -mt-6 md:mt-0 md:w-full reveal relative glass-panel p-6 md:p-8 rounded-[2rem] overflow-hidden group border border-white/10 shadow-2xl z-20 bg-dark/90 md:bg-transparent">
+                        <div class="absolute -right-4 -top-8 font-display font-bold text-8xl text-white/[0.03] group-hover:text-gold-glow/[0.05] transition-colors pointer-events-none select-none">03</div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gold-glow/30 flex items-center justify-center text-gold-glow mb-4 relative z-10 bg-dark/50">
+                            <i class="fas fa-spa text-xs md:text-sm"></i>
+                        </div>
+                        <h3 class="font-display text-lg md:text-xl font-bold text-white mb-2 relative z-10">Application</h3>
+                        <p class="text-white/50 text-xs md:text-sm leading-relaxed relative z-10">I arrive at your location with fresh organic henna to meticulously bring the design to life.</p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="w-[85%] self-end -mt-6 md:mt-0 md:w-full reveal relative glass-panel p-6 md:p-8 rounded-[2rem] overflow-hidden group border border-white/10 shadow-2xl z-30 bg-[#0d0a08] md:bg-transparent">
+                        <div class="absolute -left-4 -top-8 font-display font-bold text-8xl text-white/[0.03] group-hover:text-gold-glow/[0.05] transition-colors pointer-events-none select-none">04</div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full border border-gold-glow/30 flex items-center justify-center text-gold-glow mb-4 relative z-10 bg-dark/50 ml-auto md:ml-0">
+                            <i class="fas fa-leaf text-xs md:text-sm"></i>
+                        </div>
+                        <h3 class="font-display text-lg md:text-xl font-bold text-white mb-2 relative z-10 text-right md:text-left">Aftercare</h3>
+                        <p class="text-white/50 text-xs md:text-sm leading-relaxed relative z-10 text-right md:text-left">You receive detailed instructions to guarantee a rich, dark, and long-lasting maroon stain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Mobile: Scattered Polaroids | Desktop: Grid) -->
+    <section id="gallery" class="py-16 md:py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-16 md:mb-16 reveal text-center md:text-left">
+                <div>
+                    <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">The Art</p>
+                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Portfolio</h2>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:grid md:grid-cols-3 md:gap-6 pt-4 md:pt-0">
+                <!-- Gallery Item 1 -->
+                <div class="w-[85%] rotate-3 transform origin-bottom-left md:w-full md:rotate-0 glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2.5rem] group cursor-pointer reveal hover:border-gold-glow/40 transition-colors relative z-10" onclick="openLightbox(this)">
+                    <div class="w-full h-56 md:h-80 rounded-[1rem] md:rounded-[2rem] overflow-hidden relative">
+                        <img src="images/mehndi_bridal.png" alt="Bridal Mehndi" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="glass px-4 md:px-6 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm tracking-widest uppercase font-semibold">Bridal</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="w-[80%] self-end -rotate-6 -mt-16 md:w-full md:mt-0 md:rotate-0 glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2.5rem] group cursor-pointer reveal md:delay-100 hover:border-gold-glow/40 transition-colors relative z-20 shadow-2xl" onclick="openLightbox(this)">
+                    <div class="w-full h-64 md:h-80 rounded-[1rem] md:rounded-[2rem] overflow-hidden relative">
+                        <img src="images/mehndi_arabic.png" alt="Arabic Mehndi" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="glass px-4 md:px-6 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm tracking-widest uppercase font-semibold">Arabic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="w-[85%] mx-auto rotate-2 -mt-20 md:w-full md:mt-0 md:rotate-0 glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2.5rem] group cursor-pointer reveal md:delay-200 hover:border-gold-glow/40 transition-colors relative z-30 shadow-2xl" onclick="openLightbox(this)">
+                    <div class="w-full h-56 md:h-80 rounded-[1rem] md:rounded-[2rem] overflow-hidden relative">
+                        <img src="images/mehndi_fusion.png" alt="Fusion Mehndi" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="glass px-4 md:px-6 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm tracking-widest uppercase font-semibold">Fusion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="w-[90%] -rotate-3 self-start -mt-16 md:w-full md:mt-0 md:rotate-0 md:col-span-2 glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2.5rem] group cursor-pointer reveal hover:border-gold-glow/40 transition-colors relative z-40 shadow-2xl" onclick="openLightbox(this)">
+                    <div class="w-full h-64 md:h-[400px] rounded-[1rem] md:rounded-[2rem] overflow-hidden relative">
+                        <img src="images/mehndi_engagement.png" alt="Engagement Mehndi" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="glass px-4 md:px-6 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm tracking-widest uppercase font-semibold">Engagement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="w-[75%] rotate-6 self-end -mt-24 md:w-full md:mt-0 md:rotate-0 glass-panel p-2 md:p-3 rounded-[1.5rem] md:rounded-[2.5rem] group cursor-pointer reveal md:delay-100 hover:border-gold-glow/40 transition-colors relative z-50 shadow-2xl" onclick="openLightbox(this)">
+                    <div class="w-full h-48 md:h-[400px] rounded-[1rem] md:rounded-[2rem] overflow-hidden relative">
+                        <img src="images/mehndi_feet.png" alt="Feet Mehndi" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm">
+                            <span class="glass px-4 md:px-6 py-1.5 md:py-2 rounded-full text-white text-xs md:text-sm tracking-widest uppercase font-semibold">Feet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlapping Packages Section -->
+    <section id="packages" class="py-16 md:py-24 relative z-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-20 reveal">
+                <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">Investments</p>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Signature Packages</h2>
+            </div>
+
+            <!-- Mobile: Staggered/Overlapping vertical | Desktop: Grid -->
+            <div class="flex flex-col md:grid md:grid-cols-3 gap-0 md:gap-8 items-center pt-4 md:pt-0">
+                
+                <!-- Package 1 (Left aligned on mobile) -->
+                <div class="w-[90%] md:w-full self-start glass-panel p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] reveal border border-white/10 relative z-0">
+                    <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-2">The Minimalist</h3>
+                    <p class="text-white/50 text-xs md:text-sm mb-6">For the modern, subtle bride</p>
+                    <div class="font-display text-3xl md:text-4xl font-bold text-gold-glow mb-6 md:mb-8">₹5,000</div>
+                    <ul class="space-y-3 md:space-y-4 text-xs md:text-sm text-white/70 mb-8">
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Front & back till wrist</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Simple feet (ankles)</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Organic henna cone</li>
+                    </ul>
+                    <a href="#contact" class="inline-block glass px-6 py-3 rounded-full text-sm font-semibold text-center hover:border-gold-glow transition-all w-full">Inquire Now</a>
+                </div>
+
+                <!-- Package 2 (Featured - Right aligned, overlapping on mobile) -->
+                <div class="w-[95%] md:w-full self-end -mt-10 md:mt-0 glass-panel p-8 md:p-12 rounded-[2.5rem] md:rounded-[3rem] reveal delay-100 border border-gold-glow/50 relative shadow-[0_0_30px_rgba(202,103,2,0.15)] transform md:-translate-y-4 z-10 backdrop-blur-2xl">
+                    <div class="absolute top-0 right-8 md:left-1/2 md:-translate-x-1/2 md:right-auto bg-gold-glow text-white text-[9px] md:text-[10px] font-bold px-4 py-1.5 rounded-b-xl uppercase tracking-widest">Most Popular</div>
+                    <h3 class="font-display text-2xl md:text-3xl font-bold text-white mb-2 mt-4 md:mt-2">The Royal</h3>
+                    <p class="text-white/50 text-xs md:text-sm mb-6">Traditional grandeur & detail</p>
+                    <div class="font-display text-4xl md:text-5xl font-bold text-gold-glow mb-6 md:mb-8">₹8,500</div>
+                    <ul class="space-y-3 md:space-y-4 text-xs md:text-sm text-white/70 mb-8">
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Hands mid-forearm</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Feet up to mid-calf</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Custom bridal figures</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Priority support</li>
+                    </ul>
+                    <a href="#contact" class="inline-block glass-btn text-center text-white px-6 py-3 rounded-full text-sm font-semibold w-full">Book The Royal</a>
+                </div>
+
+                <!-- Package 3 (Left aligned, overlapping on mobile) -->
+                <div class="w-[90%] md:w-full self-start -mt-10 md:mt-0 glass-panel p-8 md:p-10 rounded-[2rem] md:rounded-[2.5rem] reveal delay-200 border border-white/10 relative z-20 backdrop-blur-2xl">
+                    <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-2">Ultimate Fusion</h3>
+                    <p class="text-white/50 text-xs md:text-sm mb-6">Elaborate storytelling art</p>
+                    <div class="font-display text-3xl md:text-4xl font-bold text-gold-glow mb-6 md:mb-8">₹12,000</div>
+                    <ul class="space-y-3 md:space-y-4 text-xs md:text-sm text-white/70 mb-8">
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Full arms to elbows</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Detailed feet to knees</li>
+                        <li class="flex gap-3"><i class="fas fa-check text-gold-glow mt-1"></i> Couple portraits</li>
+                    </ul>
+                    <a href="#contact" class="inline-block glass px-6 py-3 rounded-full text-sm text-center font-semibold hover:border-gold-glow transition-all w-full">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Diaries (Mobile: Floating Chat Bubbles | Desktop: Grid) -->
+    <section id="reviews" class="py-16 md:py-24 relative z-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16 reveal">
+                <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">Bridal Love</p>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Client Diaries</h2>
+            </div>
+
+            <div class="flex flex-col px-2 md:grid md:grid-cols-3 md:gap-6 md:px-0">
+                
+                <!-- Review 1 -->
+                <div class="w-[90%] md:w-full self-start rounded-[2rem] rounded-tl-none md:rounded-tl-[2rem] glass-panel p-6 md:p-8 reveal border border-white/10 transition-colors flex flex-col z-10 relative">
+                    <div class="flex text-gold-glow text-xs md:text-sm mb-4 md:mb-6 gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6 md:mb-8 italic flex-grow">"Sana made my bridal mehndi absolutely magical! Every guest couldn't stop complimenting the intricate details. She's patient, creative, and truly an artist."</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full glass border border-white/20 flex items-center justify-center font-display font-bold text-gold-glow text-sm md:text-base">PP</div>
+                        <div>
+                            <h4 class="font-display font-bold text-white text-sm tracking-wide">Priya Patel</h4>
+                            <p class="text-white/40 text-[10px] md:text-xs uppercase tracking-widest mt-1">Adajan, Surat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="w-[90%] md:w-full self-end -mt-6 md:mt-0 rounded-[2rem] rounded-tr-none md:rounded-tr-[2rem] glass-panel p-6 md:p-8 reveal md:delay-100 border border-white/10 transition-colors md:transform md:translate-y-8 flex flex-col z-20 relative bg-dark/80 md:bg-transparent shadow-2xl md:shadow-none backdrop-blur-2xl">
+                    <div class="flex text-gold-glow text-xs md:text-sm mb-4 md:mb-6 gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6 md:mb-8 italic flex-grow text-right md:text-left">"Booked Sana for my engagement and she exceeded all expectations! The Arabic design was stunning. She even beautifully hid my fiance's name in the pattern. So sweet!"</p>
+                    <div class="flex items-center gap-4 mt-auto flex-row-reverse md:flex-row">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full glass border border-white/20 flex items-center justify-center font-display font-bold text-gold-glow text-sm md:text-base">FS</div>
+                        <div class="text-right md:text-left">
+                            <h4 class="font-display font-bold text-white text-sm tracking-wide">Fatima Sheikh</h4>
+                            <p class="text-white/40 text-[10px] md:text-xs uppercase tracking-widest mt-1">Varachha, Surat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="w-[90%] md:w-full self-start -mt-6 md:mt-0 rounded-[2rem] rounded-tl-none md:rounded-tl-[2rem] glass-panel p-6 md:p-8 reveal md:delay-200 border border-white/10 transition-colors flex flex-col z-30 relative bg-[#0d0a08] md:bg-transparent shadow-2xl md:shadow-none backdrop-blur-2xl">
+                    <div class="flex text-gold-glow text-xs md:text-sm mb-4 md:mb-6 gap-1">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-white/70 text-sm leading-relaxed mb-6 md:mb-8 italic flex-grow">"We hired Sana for our group event — 15 girls! She was incredibly organized, fast yet so detailed. Every single person loved their design. Will definitely book again!"</p>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="w-10 h-10 md:w-12 md:h-12 rounded-full glass border border-white/20 flex items-center justify-center font-display font-bold text-gold-glow text-sm md:text-base">RD</div>
+                        <div>
+                            <h4 class="font-display font-bold text-white text-sm tracking-wide">Riya Desai</h4>
+                            <p class="text-white/40 text-[10px] md:text-xs uppercase tracking-widest mt-1">Vesu, Surat</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section (Mobile: Offset Floating Cards) -->
+    <section id="faq" class="py-16 md:py-24 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 md:mb-16 reveal">
+                <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">Curiosities</p>
+                <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white uppercase tracking-tight">Frequently Asked</h2>
+            </div>
+
+            <div class="flex flex-col gap-4 md:gap-4 md:space-y-0">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item w-[95%] self-start md:w-full glass-panel rounded-2xl md:rounded-[2rem] border border-white/10 overflow-hidden reveal">
+                    <button class="w-full px-5 md:px-8 py-4 md:py-6 flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-display font-bold text-white/90 text-sm md:text-base pr-4">How far in advance should I book my bridal mehndi?</span>
+                        <i class="fas fa-plus faq-icon text-white/50 text-sm"></i>
+                    </button>
+                    <div class="faq-content bg-black/20">
+                        <p class="px-5 md:px-8 pb-5 md:pb-6 text-xs md:text-sm text-white/60 leading-relaxed pt-2">It is highly recommended to book 3-4 months in advance, especially during peak wedding seasons (November to February), to secure your preferred dates.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item w-[95%] self-end md:w-full glass-panel rounded-2xl md:rounded-[2rem] border border-white/10 overflow-hidden reveal md:delay-100">
+                    <button class="w-full px-5 md:px-8 py-4 md:py-6 flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-display font-bold text-white/90 text-sm md:text-base pr-4">Is your henna chemical-free?</span>
+                        <i class="fas fa-plus faq-icon text-white/50 text-sm"></i>
+                    </button>
+                    <div class="faq-content bg-black/20">
+                        <p class="px-5 md:px-8 pb-5 md:pb-6 text-xs md:text-sm text-white/60 leading-relaxed pt-2">Absolutely. I hand-mix my henna paste using 100% organic Rajasthani henna powder, essential oils (like eucalyptus or lavender), lemon juice, and sugar. No PPD or chemical dyes are ever used.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item w-[95%] self-start md:w-full glass-panel rounded-2xl md:rounded-[2rem] border border-white/10 overflow-hidden reveal md:delay-200">
+                    <button class="w-full px-5 md:px-8 py-4 md:py-6 flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-display font-bold text-white/90 text-sm md:text-base pr-4">Do you provide home services outside Surat?</span>
+                        <i class="fas fa-plus faq-icon text-white/50 text-sm"></i>
+                    </button>
+                    <div class="faq-content bg-black/20">
+                        <p class="px-5 md:px-8 pb-5 md:pb-6 text-xs md:text-sm text-white/60 leading-relaxed pt-2">My primary service area covers all of Surat. I do take out-of-station bridal bookings, but travel and accommodation charges will apply additionally based on the location.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item w-[95%] self-end md:w-full glass-panel rounded-2xl md:rounded-[2rem] border border-white/10 overflow-hidden reveal md:delay-300">
+                    <button class="w-full px-5 md:px-8 py-4 md:py-6 flex items-center justify-between text-left focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="font-display font-bold text-white/90 text-sm md:text-base pr-4">How long does the application take?</span>
+                        <i class="fas fa-plus faq-icon text-white/50 text-sm"></i>
+                    </button>
+                    <div class="faq-content bg-black/20">
+                        <p class="px-5 md:px-8 pb-5 md:pb-6 text-xs md:text-sm text-white/60 leading-relaxed pt-2">Bridal mehndi typically takes between 4 to 7 hours depending on the intricacy and length of the design. Engagement or party mehndi usually takes 1 to 2 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Why Choose Me (Mobile: Slanted Offset Pills) -->
+    <section class="py-16 md:py-24 relative z-10 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="glass-panel md:rounded-[3rem] py-12 px-2 sm:p-10 lg:p-20 relative overflow-hidden border-none md:border md:border-white/10 bg-transparent md:bg-white/5">
+                <div class="hidden md:block absolute -right-20 -bottom-20 md:w-80 md:h-80 bg-henna-glow/30 filter blur-[80px] rounded-full"></div>
+                
+                <div class="grid lg:grid-cols-2 gap-10 md:gap-16 relative z-10 w-full">
+                    <div class="reveal text-center md:text-left w-full">
+                        <h2 class="font-display text-4xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6 uppercase tracking-tight">The Sana <br class="hidden md:block">Difference</h2>
+                        <p class="text-white/60 mb-12 md:mb-10 text-sm md:text-base leading-relaxed max-w-md mx-auto md:mx-0">Elevating the traditional art of mehndi into a luxury, skin-safe experience tailored exclusively for you.</p>
+                        
+                        <div class="flex flex-col gap-6 md:space-y-6 text-left w-full">
+                            <!-- Feature 1 -->
+                            <div class="w-[95%] md:w-full self-start glass-panel md:bg-transparent md:border-none md:backdrop-blur-none p-4 rounded-3xl md:p-0 flex items-center gap-4 md:gap-5 -rotate-2 md:rotate-0 transform translate-x-2 md:translate-x-0">
+                                <div class="w-12 h-12 md:w-12 md:h-12 rounded-full glass flex items-center justify-center text-gold-glow flex-shrink-0 bg-dark/50 md:bg-white/5 border border-gold-glow/20 md:border-white/10">
+                                    <i class="fas fa-magic text-base"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-base md:text-lg">Bespoke Design</h4>
+                                    <p class="text-white/50 text-xs md:text-sm mt-1">Every pattern is uniquely crafted. No duplicates.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 2 -->
+                            <div class="w-[95%] md:w-full self-end glass-panel md:bg-transparent md:border-none md:backdrop-blur-none p-4 rounded-3xl md:p-0 flex items-center gap-4 md:gap-5 rotate-2 md:rotate-0 transform -translate-x-2 md:translate-x-0 bg-[#0d0a08] md:bg-transparent">
+                                <div class="w-12 h-12 md:w-12 md:h-12 rounded-full glass flex items-center justify-center text-gold-glow flex-shrink-0 bg-dark/50 md:bg-white/5 border border-gold-glow/20 md:border-white/10">
+                                    <i class="fas fa-droplet text-base"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-base md:text-lg">Pure Organic Paste</h4>
+                                    <p class="text-white/50 text-xs md:text-sm mt-1">Chemical-free, rich maroon stain guarantee.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Feature 3 -->
+                            <div class="w-[95%] md:w-full self-start glass-panel md:bg-transparent md:border-none md:backdrop-blur-none p-4 rounded-3xl md:p-0 flex items-center gap-4 md:gap-5 -rotate-1 md:rotate-0 transform translate-x-4 md:translate-x-0">
+                                <div class="w-12 h-12 md:w-12 md:h-12 rounded-full glass flex items-center justify-center text-gold-glow flex-shrink-0 bg-dark/50 md:bg-white/5 border border-gold-glow/20 md:border-white/10">
+                                    <i class="fas fa-map-location-dot text-base"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-display font-bold text-white text-base md:text-lg">Doorstep Comfort</h4>
+                                    <p class="text-white/50 text-xs md:text-sm mt-1">Premium service brought directly to your location in Surat.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Organic Morphing Abstract visual -->
+                    <div class="hidden lg:flex justify-center items-center relative reveal delay-200">
+                        <div class="w-72 h-72 bg-gradient-to-tr from-gold-glow to-henna-glow morph-shape opacity-80 filter blur-sm"></div>
+                        <div class="absolute w-80 h-80 glass morph-shape-reverse border border-white/20 flex items-center justify-center backdrop-blur-md">
+                            <p class="font-accent text-5xl text-white opacity-80 rotate-[-10deg]">Pure Art</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section id="contact" class="py-16 md:py-24 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+            <div class="grid lg:grid-cols-2 gap-10 md:gap-12 lg:gap-24">
+                
+                <div class="reveal text-center md:text-left">
+                    <p class="font-accent text-3xl md:text-4xl text-gold-glow mb-2">Connect</p>
+                    <h2 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 md:mb-8 uppercase tracking-tight">Reserve Your Date</h2>
+                    <p class="text-white/60 mb-8 md:mb-10 text-sm md:text-base leading-relaxed">Let's discuss your vision. Reach out through your preferred method to check availability and book your session.</p>
+
+                    <div class="flex flex-col gap-4 text-left">
+                        <!-- Glass Contact Cards -->
+                        <a href="https://wa.me/919909177685" target="_blank" class="glass-panel p-4 md:p-5 rounded-2xl flex items-center gap-4 md:gap-6 group md:hover:border-green-500/50 transition-colors">
+                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-[1rem] glass flex items-center justify-center text-xl md:text-2xl text-green-400 md:group-hover:scale-110 transition-transform">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white tracking-wide text-sm md:text-base">WhatsApp</h4>
+                                <p class="text-white/50 text-xs md:text-sm mt-0.5">Instant replies & sharing</p>
+                            </div>
+                            <i class="fas fa-arrow-right ml-auto text-white/20 md:group-hover:text-green-400 transition-colors"></i>
+                        </a>
+
+                        <a href="tel:+919000000000" class="glass-panel p-4 md:p-5 rounded-2xl flex items-center gap-4 md:gap-6 group md:hover:border-gold-glow/50 transition-colors">
+                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-[1rem] glass flex items-center justify-center text-lg md:text-xl text-gold-glow md:group-hover:scale-110 transition-transform">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-display font-bold text-white tracking-wide text-sm md:text-base">Call Me</h4>
+                                <p class="text-white/50 text-xs md:text-sm mt-0.5">+91 90000 00000</p>
+                            </div>
+                            <i class="fas fa-arrow-right ml-auto text-white/20 md:group-hover:text-gold-glow transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Glass Map Container -->
+                <div class="reveal md:delay-200 h-[300px] lg:h-auto mt-4 md:mt-0">
+                    <div class="glass-panel w-full h-full p-2 md:p-3 rounded-[2rem] md:rounded-[2.5rem] border border-white/10 relative overflow-hidden">
+                        <div class="absolute top-4 right-4 md:top-8 md:right-8 z-10 glass px-3 md:px-4 py-1.5 md:py-2 rounded-full backdrop-blur-xl border border-white/20 shadow-xl flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-gold-glow animate-pulse"></span>
+                            <span class="text-[10px] md:text-xs font-bold text-white tracking-widest uppercase">Surat, IN</span>
+                        </div>
+                        <!-- Inverted grayscale map for sleek look -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29770.5!2d72.82!3d21.19!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04e59411d1563%3A0xfe4558290938b042!2sSurat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1" 
+                            class="w-full h-full rounded-[1.5rem] md:rounded-[2rem] filter grayscale contrast-125 invert opacity-80" 
+                            style="border:0;" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Glass Footer -->
+    <footer class="relative z-10 mt-12 md:mt-20 border-t border-white/10 glass">
+        <div class="max-w-7xl mx-auto px-6 py-12 md:py-20 grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
+            <div class="md:col-span-2 flex flex-col items-center md:items-start">
+                <a href="#hero" class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full glass border border-white/20 flex items-center justify-center text-white">
+                        <i class="fas fa-leaf text-sm"></i>
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight text-white uppercase">Sana.</span>
+                </a>
+                <p class="text-white/50 text-xs md:text-sm leading-relaxed max-w-sm mb-8">
+                    Elevating the timeless art of henna through sleek, modern design and uncompromising quality.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white hover:-translate-y-1 transition-all border border-white/10 hover:border-gold-glow"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white hover:-translate-y-1 transition-all border border-white/10 hover:border-gold-glow"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white/70 hover:text-white hover:-translate-y-1 transition-all border border-white/10 hover:border-gold-glow"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="font-display font-bold text-white mb-4 md:mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+                <ul class="space-y-3 text-xs md:text-sm text-white/50">
+                    <li><a href="#process" class="hover:text-gold-glow transition-colors">The Journey</a></li>
+                    <li><a href="#packages" class="hover:text-gold-glow transition-colors">Pricing Packages</a></li>
+                    <li><a href="#gallery" class="hover:text-gold-glow transition-colors">Portfolio</a></li>
+                    <li><a href="#faq" class="hover:text-gold-glow transition-colors">FAQs</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="font-display font-bold text-white mb-4 md:mb-6 uppercase tracking-widest text-xs">Legal</h4>
+                <ul class="space-y-3 text-xs md:text-sm text-white/50">
+                    <li><a href="#" class="hover:text-gold-glow transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-gold-glow transition-colors">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-white/5 py-6 text-center pb-20 md:pb-6">
+            <p class="text-white/30 text-[10px] md:text-xs tracking-widest uppercase">© 2026 Sana Mehndi. Created in Surat.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal (Glassmorphism) -->
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center opacity-0 transition-opacity duration-500">
+        <!-- Blur backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-xl"></div>
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 md:top-8 md:right-8 w-10 h-10 md:w-12 md:h-12 rounded-full glass flex items-center justify-center text-white hover:text-gold-glow hover:rotate-90 transition-all z-10 border border-white/20">
+            <i class="fas fa-times md:text-xl"></i>
+        </button>
+        <div class="relative z-10 glass-panel p-2 rounded-[1.5rem] md:rounded-[2rem] max-w-[95%] max-h-[90vh] transform scale-95 transition-transform duration-500" id="lightbox-content">
+            <img id="lightbox-img" src="" alt="Preview" class="max-h-[85vh] max-w-full object-contain rounded-[1rem] md:rounded-[1.5rem]">
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp - Mobile adjusted -->
+    <a href="https://wa.me/919909177685" target="_blank" class="fixed bottom-6 right-4 md:right-6 w-12 h-12 md:w-14 md:h-14 rounded-full bg-green-500 flex items-center justify-center text-white text-2xl md:text-3xl shadow-[0_0_20px_rgba(34,197,94,0.4)] z-50 hover:scale-110 transition-transform animate-bounce" style="animation-duration: 2.5s;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
